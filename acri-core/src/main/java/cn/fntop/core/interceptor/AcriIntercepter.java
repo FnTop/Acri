@@ -32,13 +32,13 @@ public class AcriIntercepter implements HandlerInterceptor {
             Acries acries = method.getAnnotation(Acries.class);
             if (acries != null && acries.more().length > 0) {
                 Arrays.stream(acries.more()).forEach(acri -> {
-                    if (acri != null && acri.before()) {
+                    if (acri != null && acri.value() != null && acri.before()) {
                         context.getBean(acri.value()).doBefore(request, response, handler);
                     }
                 });
             } else {
                 Acri acri = method.getAnnotation(Acri.class);
-                if (acri != null && acri.before()) {
+                if (acri != null && acri.value() != null && acri.before()) {
                     context.getBean(acri.value()).doBefore(request, response, handler);
                 }
             }
@@ -53,13 +53,13 @@ public class AcriIntercepter implements HandlerInterceptor {
             Acries acries = method.getAnnotation(Acries.class);
             if (acries != null && acries.more().length > 0) {
                 Arrays.stream(acries.more()).forEach(acri -> {
-                    if (acri != null && acri.before()) {
+                    if (acri != null && acri.value() != null && acri.during()) {
                         context.getBean(acri.value()).doDuring(request, response, handler, modelAndView);
                     }
                 });
             } else {
                 Acri acri = method.getAnnotation(Acri.class);
-                if (acri != null && acri.during()) {
+                if (acri != null && acri.value() != null && acri.during()) {
                     context.getBean(acri.value()).doDuring(request, response, handler, modelAndView);
                 }
             }
@@ -74,13 +74,13 @@ public class AcriIntercepter implements HandlerInterceptor {
             Acries acries = method.getAnnotation(Acries.class);
             if (acries != null && acries.more().length > 0) {
                 Arrays.stream(acries.more()).forEach(acri -> {
-                    if (acri != null && acri.before()) {
+                    if (acri != null && acri.value() != null && acri.after()) {
                         context.getBean(acri.value()).doAfter(request, response, handler, ex);
                     }
                 });
             } else {
                 Acri acri = method.getAnnotation(Acri.class);
-                if (acri != null && acri.after()) {
+                if (acri != null && acri.value() != null && acri.after()) {
                     context.getBean(acri.value()).doAfter(request, response, handler, ex);
                 }
             }
