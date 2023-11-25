@@ -1,4 +1,5 @@
 <div align="center">
+<img style="margin: 5px 3px" src="img.png" alt="Fn">
 
 <p>🍍🍍Acri 注解式自定义请求拦截🍍🍍</p>
 
@@ -38,21 +39,19 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 |:-------:|:-------------------:|:------------:|
 |  1.0.0  |        2.7.15        |     1.8      |
 
-## 🫐🫐Maven
+## 🫐🫐依赖
 ```xml
 <dependency>
     <groupId>cn.fntop</groupId>
     <artifactId>acri-core</artifactId>
     <version>1.0.0</version>
 </dependency>
-```
-## 🍒🍒Gradle
-``` 
-//方式1
+
 implementation 'cn.fntop:acri-core:1.0.0'
 //方式2
 implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
-```
+``` 
+
 
 ## 🍐🍐注解说明
 `@Acri`
@@ -63,13 +62,86 @@ implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
 | before | false | 是否处理请求前执行doBefore方法                |
 | during | false | 是否处理请求方法后执行doDuring方法              |
 | after  | false | 是否在返回响应后执行doAfter方法                |
+
 `@Acries`
 
 | 配置项    | 默认值   | 备注                                 |
 |:-------|:------|:-----------------------------------|
 | more  | null  | 批量@Acri |
-# 🥝🥝群聊
 
+# 🍈🍈使用方式
+
+## 添加拦截器
+
+```java
+@Configuration
+public class AcriConfig implements WebMvcConfigurer, ApplicationContextAware {
+private ApplicationContext applicationContext;
+    @Override
+    public void addInterceptors(InterceptorRegistry registry) {
+    // 全局拦截
+    registry.addInterceptor(new AcriIntercepter(applicationContext));
+    }
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+    }
+
+    @Override
+    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
+        this.applicationContext = applicationContext;
+    }
+}
+
+```
+
+## 添加注解
+
+```java
+@Acri(value = AcriStopWatchProcessor.class, before = true, during = true, after = true)
+@GetMapping("/login")
+public String login() {
+    log.info("登录中");
+    return "登录成功";
+}
+```
+## 效果
+<img style="margin: 5px 3px" src="img_1.png" alt="Fn">
+
+# 🍉🍉自定义拦截
+```java
+@Slf4j
+@Component
+public class CustomProcessor implements AcriProcessor {
+    @Override
+    public void doBefore(HttpServletRequest request, HttpServletResponse response, Object handler) {
+        log.info("before");
+    }
+
+    @Override
+    public void doDuring(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) {
+        log.info("doDuring");
+    }
+    @Override
+    public void doAfter(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) {
+        log.info("doAfter");
+    }
+}
+```
+
+# 🍏🍏多拦截支持
+
+```java
+@Acries(more = {@Acri(value = AcriStopWatchProcessor.class, before = true, after = true)
+            , @Acri(value = CustomProcessor.class, before = true, after = true)})
+@GetMapping("/login")
+public String login() {
+    log.info("登录中");
+    return "登录成功";
+}
+```
+
+# 🥝🥝群聊
 
 `QQ群：697135336`
 `微信：gensui_`
