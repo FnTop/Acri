@@ -1,13 +1,13 @@
 <div align="center">
 <img align="center" src="" alt="Fn">
-<p>Acri 注解式自定义拦截器</p>
+<p>Acri 注解式自定义请求拦截</p>
 </div>
 
 <div align="center">
 
 <div style="display: flex; justify-content: center;">  
-    <img style="margin: 5px 3px" src="https://gitee.com/FnTop/Acri/badge/star.svg?theme=light" alt="Fn">
-    <img style="margin: 5px 3px" src="https://gitee.com/FnTop/Acri/badge/fork.svg?theme=dark" alt="Fn">
+    <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/star.svg?theme=light" alt="Fn">
+    <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/fork.svg?theme=dark" alt="Fn">
     <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.0.0-green" alt="Fn">
     <img style="margin: 5px 3px" src="https://img.shields.io/badge/Apache-License2.0-green" alt="Apache2.0">
 
@@ -25,8 +25,6 @@
 # 介绍
 Acri注解式自定义请求拦截（全称Annotation custom request interception）
 使用一个简单的注解即可实现请求的拦截处理
-
-
 
 # 特点
 
