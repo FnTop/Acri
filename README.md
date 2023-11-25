@@ -54,7 +54,7 @@ implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
 
 
 ## 🍐🍐注解说明
-`@Acri`
+`@Acri(value = AcriStopWatchProcessor.class, before = true, during = true, after = true)`
 
 | 配置项    | 默认值   | 备注                                 |
 |:-------|:------|:-----------------------------------|
@@ -63,7 +63,9 @@ implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
 | during | false | 是否处理请求方法后执行doDuring方法              |
 | after  | false | 是否在返回响应后执行doAfter方法                |
 
-`@Acries` 如果存在该注解则`@Acri`注解不起作用
+`@Acries(more = {@Acri(value = AcriStopWatchProcessor.class, before = true, after = true)
+, @Acri(value = CustomProcessor.class, before = true, after = true)})` 
+如果存在`@Acries`注解，则`@Acri`注解不起作用
 
 | 配置项    | 默认值   | 备注                                 |
 |:-------|:------|:-----------------------------------|
