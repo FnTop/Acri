@@ -9,7 +9,7 @@
 
     <name>Acri</name>
     <description>注解自定义请求拦截</description>
-    <url>https://gitee.com/FnTop/Acri</url>
+    <url>https://gitee.com/FnTop/acri</url>
 
     <modules>
         <module>acri-core</module>
@@ -36,9 +36,9 @@
     <!-- 仓库信息 -->
     <scm>
         <tag>master</tag>
-        <url>https://gitee.com/FnTop/Acri.git</url>
-        <connection>scm:git:https://gitee.com/FnTop/Acri.git</connection>
-        <developerConnection>scm:git:https://gitee.com/FnTop/Acri.git</developerConnection>
+        <url>https://gitee.com/FnTop/acri.git</url>
+        <connection>scm:git:https://gitee.com/FnTop/acri.git</connection>
+        <developerConnection>scm:git:https://gitee.com/FnTop/acri.git</developerConnection>
     </scm>
 
     <properties>
