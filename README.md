@@ -33,7 +33,6 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 
 
 ## 🫐🫐依赖
-如果`Release`版本不可用，请使用`1.0.0-SNAPSHOT`
 ```xml
 <dependency>
     <groupId>cn.fntop</groupId>
