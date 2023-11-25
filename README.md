@@ -29,9 +29,9 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 
 # 🍊🍊特点
 
-* 简单一个`@Acri`注解即可实现请求拦截
-* 支持请求before、during、after 单一或同时处理
-* 支持自定义请求拦截器，且多个拦截器可隔离控制单一或同时处理
+* 一个`@Acri`注解即可实现请求拦截
+* 支持请求before、during、after `单一`或`同时`处理
+* 支持`自定义请求拦截器`，且多个拦截器可`隔离控制`单一或同时处理
 
 ## 🍋🍋版本说明
 | version | spring boot version | java version |
@@ -62,7 +62,7 @@ implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
 | during | false | 是否处理请求方法后执行doDuring方法              |
 | after  | false | 是否在返回响应后执行doAfter方法                |
 
-`@Acries`
+`@Acries` 如果存在该注解则`@Acri`注解不起作用
 
 | 配置项    | 默认值   | 备注                                 |
 |:-------|:------|:-----------------------------------|
