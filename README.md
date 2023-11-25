@@ -31,7 +31,7 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 
 * 一个`@Acri`注解即可实现请求拦截
 * 支持请求before、during、after `单一`或`同时`处理
-* 支持`自定义请求拦截器`，且多个拦截器可`隔离控制`单一或同时处理
+* 支持`自定义请求拦截器`，多个拦截器可`隔离控制`并且每个拦截器均可单一或同时处理
 
 ## 🍋🍋版本说明
 | version | spring boot version | java version |
@@ -39,6 +39,7 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 |  1.0.0  |        2.7.15        |     1.8      |
 
 ## 🫐🫐依赖
+如果`Release`版本不可用，请使用`1.0.0-SNAPSHOT`
 ```xml
 <dependency>
     <groupId>cn.fntop</groupId>
