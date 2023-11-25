@@ -9,16 +9,14 @@
 <div style="display: flex; justify-content: center;">  
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/star.svg?theme=light" alt="Fn">
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/fork.svg?theme=dark" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.0.0-green" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Apache-License2.0-green" alt="Apache2.0">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/VERSION-1.0.0-green" alt="Fn">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/APACHE-2.0-green" alt="Apache2.0">
 
 </div>
 
 <div style="display: flex; justify-content: center;">  
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Maven-3.5.2-blue" alt="Maven">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Java-1.8-blue">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/SpringBoot-2.6.2-blue">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Author-4n-blue.svg" alt="Fn">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/JAVA-1.8-blue">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/SPRINGBOOT-2.7.15-blue">
 </div>
 
 </div>
@@ -33,10 +31,6 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 * 支持请求before、during、after `单一`或`同时`处理
 * 支持`自定义请求拦截器`，多个拦截器可`隔离控制`并且每个拦截器均可单一或同时处理
 
-## 🍋🍋版本说明
-| version | spring boot version | java version |
-|:-------:|:-------------------:|:------------:|
-|  1.0.0  |        2.7.15        |     1.8      |
 
 ## 🫐🫐依赖
 如果`Release`版本不可用，请使用`1.0.0-SNAPSHOT`
