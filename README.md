@@ -1,5 +1,5 @@
 <div align="center">
-<img style="margin: 5px 3px" src="img_2.png" alt="Fn">
+<img style="margin: 5px 3px" src="static/img/logo.png" alt="Fn">
 
 <p>🍍🍍Acri 注解式自定义请求拦截🍍🍍</p>
 </div>
@@ -101,7 +101,7 @@ public String login() {
 }
 ```
 ## 效果
-<img style="margin: 5px 3px" src="img_1.png" alt="Fn">
+<img style="margin: 5px 3px" src="static/img/img_1.png" alt="Fn">
 
 # 🍉🍉自定义拦截
 ```java
