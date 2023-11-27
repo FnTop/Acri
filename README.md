@@ -26,9 +26,9 @@
 
 [文档](http://fntop.gitee.io/acri-doc)
 
-Acri（全称Annotation Custom Request Interception）
+Acri注解式自定义请求拦截（全称Annotation Custom Request Interception）
 
-一个注解即可实现请求的拦截处理
+使用一个简单的注解即可实现请求的拦截处理
 
 # 🍊🍊特点
 
