@@ -43,7 +43,7 @@
 
     <properties>
         <!-- 加了-SNAPSHOT后缀发布到 sonatype-snapshots（可发相同版本号） 对应的仓库 ，否则发布到sonatype-release（每次发布的版本号都要不一样）对应的仓库 -->
-        <revision>1.0.0-SNAPSHOT</revision>
+        <revision>1.1.0</revision>
 
         <!-- 项目默认配置 -->
         <java.version>1.8</java.version>
@@ -149,21 +149,6 @@
                         <phase>package</phase>
                         <goals>
                             <goal>jar-no-fork</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- gpg -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-gpg-plugin</artifactId>
-                <version>${maven-gpg-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>ossrh</id>
-                        <phase>verify</phase>
-                        <goals>
-                            <goal>sign</goal>
                         </goals>
                     </execution>
                 </executions>
@@ -277,6 +262,22 @@
                         </executions>
                     </plugin>
                     <!-- Release -->
+
+                    <!-- gpg -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>ossrh</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
                     <plugin>
                         <groupId>org.sonatype.plugins</groupId>
                         <artifactId>nexus-staging-maven-plugin</artifactId>
