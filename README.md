@@ -33,8 +33,10 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 # 🍊🍊特点
 
 * 一个`@Acri`注解即可实现请求拦截
-* 支持请求before、during、after `单一`或`同时`处理
-* 支持`自定义请求拦截器`，多个拦截器可`隔离控制`并且每个拦截器均可单一或同时处理
+* 支持单个方法拦截
+* 支持不同方法不同拦截
+* 支持单个方法多个拦截
+* 支持自定义拦截器
 
 
 # 🫐🫐依赖
@@ -42,7 +44,7 @@ Acri注解式自定义请求拦截（全称Annotation custom request interceptio
 <dependency>
     <groupId>cn.fntop</groupId>
     <artifactId>acri-core</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 
 implementation 'cn.fntop:acri-core:1.0.0'
@@ -70,30 +72,6 @@ implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
 | more  | null  | 批量@Acri |
 
 # 🍈🍈使用方式
-
-## 添加拦截器
-
-```java
-@Configuration
-public class AcriConfig implements WebMvcConfigurer, ApplicationContextAware {
-private ApplicationContext applicationContext;
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-    // 全局拦截
-    registry.addInterceptor(new AcriIntercepter(applicationContext));
-    }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    }
-
-    @Override
-    public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
-    }
-}
-
-```
 
 ## 添加注解
 
@@ -145,6 +123,7 @@ public String login() {
 
 `QQ群：697135336`
 `微信：gensui_`
+
 
 
 
