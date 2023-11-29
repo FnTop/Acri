@@ -50,9 +50,9 @@ Acri（全称Annotation Custom Request Interception）
     <version>1.2.0</version>
 </dependency>
 
-implementation 'cn.fntop:acri-core:1.0.0'
+implementation 'cn.fntop:acri-core:1.2.0'
 //方式2
-implementation group: 'cn.fntop', name: 'acri-corer', version: '1.0.0'
+implementation group: 'cn.fntop', name: 'acri-corer', version: '1.2.0'
 ```
 
 # 🍈🍈使用方式
