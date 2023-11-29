@@ -71,6 +71,7 @@ public String login() {
 <img style="margin: 5px 3px" src="static/img/img_1.png" alt="Fn">
 
 # 🍍🍍AOP切面支持
+`@AcriAspect(fallback = TestController.class, around = true, throwing = true, before = true, after = true)`
 
 ```
 @RestController
