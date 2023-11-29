@@ -37,6 +37,9 @@ Acri（全称Annotation Custom Request Interception）
 * 支持不同方法不同拦截
 * 支持单个方法多个拦截
 * 支持自定义拦截器
+* 支持AOP注解切面（可写在Controller和Service）
+* 切面支持自定义切面类
+* 切面支持自定义切面方法
 
 
 # 🫐🫐依赖
@@ -67,6 +70,41 @@ public String login() {
 ## 效果
 <img style="margin: 5px 3px" src="static/img/img_1.png" alt="Fn">
 
+# 🍍🍍AOP切面支持
+
+```
+@RestController
+@Slf4j
+public class TestController {
+
+    @AcriAspect(fallback = TestController.class, around = true, throwing = true, before = true, after = true)
+    @GetMapping("/login")
+    public User login(User param) {
+        log.info("登录中,{}", param);
+//        int i = 1 / 0;
+        return new User();
+    }
+    public void before(AcriContainer container) {
+        log.info("before => {}", container.getParams() == null ? "" : container.getParams().toString());
+    }
+    public void after(AcriContainer container) {
+        log.info("after => {}", container.getResult() == null ? "" : container.getResult().toString());
+        log.info("after => {}", container.getParams() == null ? "" : container.getParams().toString());
+    }
+    public void beforeAround(AcriContainer container) {
+        log.info("beforeAround => {}", container.getParams() == null ? "" : container.getParams().toString());
+    }
+    public void afterAround(AcriContainer container) {
+        log.info("afterAround => {}", container.getResult() == null ? "" : container.getResult().toString());
+        log.info("afterAround => {}", container.getParams() == null ? "" : container.getParams().toString());
+    }
+    public void throwing(AcriContainer container) {
+        log.info("throwing => {}", container.getException() == null ? "" : container.getException().toString());
+        log.info("throwing => {}", container.getParams() == null ? "" : container.getParams().toString());
+    }
+}
+
+```
 
 # 🥝🥝群聊
 

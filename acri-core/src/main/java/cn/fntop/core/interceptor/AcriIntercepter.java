@@ -30,8 +30,8 @@ public class AcriIntercepter implements HandlerInterceptor {
         if (handler instanceof HandlerMethod) {
             Method method = ((HandlerMethod) handler).getMethod();
             Acries acries = method.getAnnotation(Acries.class);
-            if (acries != null && acries.more().length > 0) {
-                Arrays.stream(acries.more()).forEach(acri -> {
+            if (acries != null && acries.acries().length > 0) {
+                Arrays.stream(acries.acries()).forEach(acri -> {
                     if (acri != null && acri.value() != null && acri.before()) {
                         context.getBean(acri.value()).doBefore(request, response, handler);
                     }
@@ -51,8 +51,8 @@ public class AcriIntercepter implements HandlerInterceptor {
         if (handler instanceof HandlerMethod) {
             Method method = ((HandlerMethod) handler).getMethod();
             Acries acries = method.getAnnotation(Acries.class);
-            if (acries != null && acries.more().length > 0) {
-                Arrays.stream(acries.more()).forEach(acri -> {
+            if (acries != null && acries.acries().length > 0) {
+                Arrays.stream(acries.acries()).forEach(acri -> {
                     if (acri != null && acri.value() != null && acri.during()) {
                         context.getBean(acri.value()).doDuring(request, response, handler, modelAndView);
                     }
@@ -72,8 +72,8 @@ public class AcriIntercepter implements HandlerInterceptor {
         if (handler instanceof HandlerMethod) {
             Method method = ((HandlerMethod) handler).getMethod();
             Acries acries = method.getAnnotation(Acries.class);
-            if (acries != null && acries.more().length > 0) {
-                Arrays.stream(acries.more()).forEach(acri -> {
+            if (acries != null && acries.acries().length > 0) {
+                Arrays.stream(acries.acries()).forEach(acri -> {
                     if (acri != null && acri.value() != null && acri.after()) {
                         context.getBean(acri.value()).doAfter(request, response, handler, ex);
                     }
