@@ -47,7 +47,7 @@ Acri（全称Annotation Custom Request Interception）
 <dependency>
     <groupId>cn.fntop</groupId>
     <artifactId>acri-core</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
 </dependency>
 
 implementation 'cn.fntop:acri-core:1.0.0'
