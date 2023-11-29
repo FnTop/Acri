@@ -37,7 +37,7 @@ Acri（全称Annotation Custom Request Interception）
 * 支持不同方法不同拦截
 * 支持单个方法多个拦截
 * 支持自定义拦截器
-* 支持AOP注解切面（可写在Controller和Service）
+* 一个`@AcriAspect`注解搞定自定义切面
 * 切面支持自定义切面类
 * 切面支持自定义切面方法
 
