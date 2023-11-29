@@ -73,6 +73,7 @@ public String login() {
 # 🍍🍍AOP切面支持
 
 [详细文档](http://fntop.gitee.io/acri-doc)
+
 `@AcriAspect(fallback = TestController.class, around = true, throwing = true, before = true, after = true)`
 
 ```
