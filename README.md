@@ -71,6 +71,8 @@ public String login() {
 <img style="margin: 5px 3px" src="static/img/img_1.png" alt="Fn">
 
 # 🍍🍍AOP切面支持
+
+[详细文档](http://fntop.gitee.io/acri-doc)
 `@AcriAspect(fallback = TestController.class, around = true, throwing = true, before = true, after = true)`
 
 ```
@@ -107,7 +109,7 @@ public class TestController {
 
 ```
 
-# 🥝🥝群聊
+# 🥝🥝联系方式
 
 `QQ群：697135336`
 `微信：gensui_`
