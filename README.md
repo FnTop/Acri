@@ -28,7 +28,7 @@
 
 Acri（全称Annotation Custom Request Interception）
 
-一个注解即可实现请求的拦截处理
+一个注解即可实现请求的拦截处理或AOP增强
 
 # 🍊🍊特点
 
