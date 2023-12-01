@@ -49,10 +49,6 @@ Acri（全称Annotation Custom Request Interception）
     <artifactId>acri-spring-boot-starter</artifactId>
     <version>1.3.0</version>
 </dependency>
-
-implementation 'cn.fntop:acri-spring-boot-starter:1.3.0'
-//方式2
-implementation group: 'cn.fntop', name: 'acri-spring-boot-starter', version: '1.3.0'
 ```
 
 # 🍈🍈使用方式
