@@ -70,6 +70,24 @@ public String login() {
 ## 效果
 <img style="margin: 5px 3px" src="static/img/img_1.png" alt="Fn">
 
+## 注解说明
+`@Acri(value = AcriStopWatchProcessor.class, before = true, during = true, after = true)`
+
+| 配置项    | 默认值   | 备注                                 |
+|:-------|:------|:-----------------------------------|
+| value  | null  | 具体拦截处理器，实现AcriProcessor并注入Spring容器 |
+| before | false | 是否处理请求前执行doBefore方法                |
+| during | false | 是否处理请求方法后执行doDuring方法              |
+| after  | false | 是否在返回响应后执行doAfter方法                |
+
+`@Acries(acries = {@Acri(value = AcriStopWatchProcessor.class, before = true, after = true)
+, @Acri(value = CustomProcessor.class, before = true, after = true)})`
+如果存在`@Acries`注解，则`@Acri`注解不起作用
+
+| 配置项    | 默认值   | 备注                                 |
+|:-------|:------|:-----------------------------------|
+| acries  | null  | 多@Acri拦截 |
+
 # 🍍🍍AOP切面支持
 
 [详细文档](http://fntop.gitee.io/acri-doc/guide/aop.html)
@@ -146,7 +164,7 @@ public class TestController {
 
 欢迎小伙伴们多提issue和PR，被接纳PR的小伙伴会列在贡献者列表中
 
-# 🥝🥝联系方式
+# 🍐🍐联系方式
 
 ## 微信群
 ![img.png](static/img/wx.png)
