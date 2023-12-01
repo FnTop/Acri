@@ -1,0 +1,39 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>cn.fntop</groupId>
+        <artifactId>Acri</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <artifactId>acri-spring-boot-starter</artifactId>
+    <packaging>jar</packaging>
+
+    <name>acri-spring-boot-starter</name>
+    <description>Acri spring-boot-starter模块</description>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!--  自动生成starter配置文件  -->
+        <dependency>
+            <groupId>net.dreamlu</groupId>
+            <artifactId>mica-auto</artifactId>
+        </dependency>
+
+        <!--  自动生成YML配置关联JSON文件  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
+        <!--  acri-core  -->
+        <dependency>
+            <groupId>cn.fntop</groupId>
+            <artifactId>acri-core</artifactId>
+        </dependency>
+    </dependencies>
+</project>

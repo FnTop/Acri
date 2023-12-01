@@ -11,9 +11,30 @@ import javax.servlet.http.HttpServletResponse;
  * @date 2023/11/26 1:01
  */
 public interface AcriProcessor {
+    /**
+     * 请求前处理
+     * @param request
+     * @param response
+     * @param handler
+     */
     void doBefore(HttpServletRequest request, HttpServletResponse response, Object handler);
+
+    /**
+     * 方法执行完后处理
+     * @param request
+     * @param response
+     * @param handler
+     * @param modelAndView
+     */
 
     void doDuring(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView);
 
+    /**
+     * 请求后处理
+     * @param request
+     * @param response
+     * @param handler
+     * @param ex
+     */
     void doAfter(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex);
 }

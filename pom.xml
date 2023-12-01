@@ -8,11 +8,12 @@
     <packaging>pom</packaging>
 
     <name>Acri</name>
-    <description>注解自定义请求拦截</description>
     <url>https://gitee.com/FnTop/acri</url>
+    <description>Acri注解式自定义请求/方法拦截</description>
 
     <modules>
         <module>acri-core</module>
+        <module>acri-spring-boot-starter</module>
     </modules>
 
     <!-- 开源协议 Apache 2.0 -->
@@ -20,8 +21,6 @@
         <license>
             <name>Apache 2</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
 
@@ -30,6 +29,9 @@
         <developer>
             <name>4n</name>
             <email>java4n@qq.com</email>
+            <url>https://www.fntop.cn</url>
+            <organization>cn.fntop</organization>
+            <organizationUrl>https://blog.fntop.cn</organizationUrl>
         </developer>
     </developers>
 
@@ -43,7 +45,7 @@
 
     <properties>
         <!-- 加了-SNAPSHOT后缀发布到 sonatype-snapshots（可发相同版本号） 对应的仓库 ，否则发布到sonatype-release（每次发布的版本号都要不一样）对应的仓库 -->
-        <revision>1.2.0</revision>
+        <revision>1.3.0</revision>
 
         <!-- 项目默认配置 -->
         <java.version>1.8</java.version>
@@ -71,7 +73,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <!-- SpringBoot的依赖配置-->
+            <!-- SpringBoot 依赖配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -79,13 +81,13 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!-- SpringBoot starter 配置-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <version>${spring.boot.version}</version>
             </dependency>
-            <!-- hutool 的依赖配置-->
+            <!-- hutool  依赖配置-->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-bom</artifactId>
@@ -100,12 +102,19 @@
                 <artifactId>acri-core</artifactId>
                 <version>${revision}</version>
             </dependency>
+
+            <!--项目starter模块-->
+            <dependency>
+                <groupId>cn.fntop</groupId>
+                <artifactId>acri-spring-boot-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>transmittable-thread-local</artifactId>
                 <version>${alibaba-ttl.version}</version>
             </dependency>
-            <!-- 自动生成starter-->
+            <!-- 自动生成starter配置 -->
             <dependency>
                 <groupId>net.dreamlu</groupId>
                 <artifactId>mica-auto</artifactId>
@@ -202,6 +211,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
     <distributionManagement>
@@ -262,7 +272,6 @@
                         </executions>
                     </plugin>
                     <!-- Release -->
-
                     <!-- gpg -->
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>

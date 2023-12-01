@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @author fn
- * @description
+ * @description Acri容器，用于包含切面方法参数、方法返回值、方法异常
  * @date 2023/11/29 19:36
  */
 @Setter
@@ -29,20 +29,5 @@ public class AcriContainer extends Exception{
 
     public AcriContainer() {
         super();
-    }
-
-    public AcriContainer setParams(List<Object> params) {
-        this.params = params;
-        return this;
-    }
-
-    public AcriContainer setException(Exception exception) {
-        this.exception = exception;
-        return this;
-    }
-
-    public AcriContainer setResult(Object result) {
-        this.result = result;
-        return this;
     }
 }
