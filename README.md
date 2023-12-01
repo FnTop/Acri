@@ -152,7 +152,7 @@ public class TestController {
 - 进群讨论
 - [提issue](https://gitee.com/FnTop/acri/issues) 先搜索再提，看是否搜到相关的issue（问题）
 - Fork 本项目
-- 新建分支，如果是加新特性，分支名格式为feat_${issue的ID号}，如果是修改bug，则命名为fix_${issue的ID号}。
+- 新建分支，如果是加新特性，分支名格式为feat_`issue的ID号`，如果是修改bug，则命名为fix_`issue的ID号`。
 - 本地自测，提交前请通过所有的单元测试，以及为您要解决的问题新增单元测试。
 - 提交代码
 - 新建 Pull Request
