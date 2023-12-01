@@ -243,6 +243,9 @@
         </profile>
         <profile>
             <id>oss-release</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <!-- Javadoc -->
