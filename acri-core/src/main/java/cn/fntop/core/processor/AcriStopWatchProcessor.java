@@ -6,7 +6,6 @@ import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.StopWatch;
 import org.springframework.context.ApplicationContext;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +18,6 @@ import java.util.Arrays;
  * @date 2023/11/26 1:20
  */
 @Slf4j
-@Component
 public class AcriStopWatchProcessor implements AcriProcessor {
     private ApplicationContext context;
 
@@ -72,6 +70,10 @@ public class AcriStopWatchProcessor implements AcriProcessor {
         return false;
     }
 
+    /**
+     * 判断是否有激活生产环境
+     * @return
+     */
     private boolean isProduction() {
         if (getActiveProfile() == null || Arrays.stream(getActiveProfile()).noneMatch(prodProfile::equals)) {
             return false;

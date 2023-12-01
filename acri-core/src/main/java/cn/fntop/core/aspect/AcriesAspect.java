@@ -9,7 +9,6 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.reflect.MethodSignature;
-import org.springframework.stereotype.Component;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -18,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Aspect
-@Component
 @Slf4j
 public class AcriesAspect {
     // 定义一个切点，匹配所有带有@Acri注解的类的方法  

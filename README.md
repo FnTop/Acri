@@ -1,7 +1,7 @@
 <div align="center">
 <img style="margin: 5px 3px" src="static/img/logo.png" alt="Fn">
 
-<p>🍍🍍注解式自定义请求拦截🍍🍍</p>
+<p>🍍🍍注解式自定义请求/方法拦截🍍🍍</p>
 </div>
 
 <div align="center">
@@ -9,7 +9,7 @@
 <div style="display: flex; justify-content: center;">  
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/star.svg?theme=light" alt="Fn">
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/fork.svg?theme=dark" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/VERSION-1.2.0-green" alt="Fn">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/VERSION-1.3.0-green" alt="Fn">
     <img style="margin: 5px 3px" src="https://img.shields.io/badge/APACHE-2.0-green" alt="Apache2.0">
 
 </div>
@@ -46,13 +46,13 @@ Acri（全称Annotation Custom Request Interception）
 ```xml
 <dependency>
     <groupId>cn.fntop</groupId>
-    <artifactId>acri-core</artifactId>
-    <version>1.2.0</version>
+    <artifactId>acri-spring-boot-starter</artifactId>
+    <version>1.3.0</version>
 </dependency>
 
-implementation 'cn.fntop:acri-core:1.2.0'
+implementation 'cn.fntop:acri-core:1.3.0'
 //方式2
-implementation group: 'cn.fntop', name: 'acri-corer', version: '1.2.0'
+implementation group: 'cn.fntop', name: 'acri-corer', version: '1.3.0'
 ```
 
 # 🍈🍈使用方式
@@ -80,7 +80,7 @@ public String login() {
 @RestController
 @Slf4j
 public class TestController {
-
+    //Acri AOP
     @AcriAspect(fallback = TestController.class, around = true, throwing = true, before = true, after = true)
     @GetMapping("/login")
     public User login(User param) {
@@ -88,20 +88,25 @@ public class TestController {
 //        int i = 1 / 0;
         return new User();
     }
+    //前置通知
     public void before(AcriContainer container) {
         log.info("before => {}", container.getParams() == null ? "" : container.getParams().toString());
     }
+    //后置通知
     public void after(AcriContainer container) {
         log.info("after => {}", container.getResult() == null ? "" : container.getResult().toString());
         log.info("after => {}", container.getParams() == null ? "" : container.getParams().toString());
     }
+    //前置环绕
     public void beforeAround(AcriContainer container) {
         log.info("beforeAround => {}", container.getParams() == null ? "" : container.getParams().toString());
     }
+    //后置环绕
     public void afterAround(AcriContainer container) {
         log.info("afterAround => {}", container.getResult() == null ? "" : container.getResult().toString());
         log.info("afterAround => {}", container.getParams() == null ? "" : container.getParams().toString());
     }
+    //异常通知
     public void throwing(AcriContainer container) {
         log.info("throwing => {}", container.getException() == null ? "" : container.getException().toString());
         log.info("throwing => {}", container.getParams() == null ? "" : container.getParams().toString());
