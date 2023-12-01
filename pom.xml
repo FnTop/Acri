@@ -8,6 +8,7 @@
     <packaging>pom</packaging>
 
     <name>Acri</name>
+    <discriptor>Acri注解式自定义请求/方法拦截</discriptor>
     <description>Acri注解式自定义请求/方法拦截</description>
     <url>https://gitee.com/FnTop/acri</url>
 
