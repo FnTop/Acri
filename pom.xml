@@ -8,9 +8,8 @@
     <packaging>pom</packaging>
 
     <name>Acri</name>
-    <discriptor>Acri注解式自定义请求/方法拦截</discriptor>
-    <description>Acri注解式自定义请求/方法拦截</description>
     <url>https://gitee.com/FnTop/acri</url>
+    <description>Acri注解式自定义请求/方法拦截</description>
 
     <modules>
         <module>acri-core</module>
@@ -22,8 +21,6 @@
         <license>
             <name>Apache 2</name>
             <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-            <comments>A business-friendly OSS license</comments>
         </license>
     </licenses>
 
@@ -32,6 +29,9 @@
         <developer>
             <name>4n</name>
             <email>java4n@qq.com</email>
+            <url>https://www.fntop.cn</url>
+            <organization>cn.fntop</organization>
+            <organizationUrl>https://blog.fntop.cn</organizationUrl>
         </developer>
     </developers>
 
