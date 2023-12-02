@@ -9,14 +9,14 @@
 <div style="display: flex; justify-content: center;">  
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/star.svg?theme=light" alt="Fn">
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/fork.svg?theme=dark" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/VERSION-1.3.0-green" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/APACHE-2.0-green" alt="Apache2.0">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.3.0-green" alt="Fn">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Apache-2.0-green" alt="Apache2.0">
 
 </div>
 
 <div style="display: flex; justify-content: center;">  
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/JAVA-1.8-blue">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/SPRINGBOOT-2.7.15-blue">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Java-1.8-blue">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/SpringBoot-2.7.15-blue">
 </div>
 
 </div>
