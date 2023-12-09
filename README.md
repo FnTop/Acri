@@ -9,7 +9,7 @@
 <div style="display: flex; justify-content: center;">  
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/star.svg?theme=light" alt="Fn">
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/fork.svg?theme=dark" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.3.0-green" alt="Fn">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.4.0-green" alt="Fn">
     <img style="margin: 5px 3px" src="https://img.shields.io/badge/Apache-2.0-green" alt="Apache2.0">
 
 </div>
@@ -32,14 +32,17 @@ Acri（全称Annotation Custom Request Interception）
 
 # 🍊🍊特点
 
-* 一个`@Acri`注解搞定请求拦截
-* 支持自定义拦截器，自定义扩展简单易用
+* 一个`@Acri`或者`@Acries`注解搞定请求拦截
+* 支持自定义拦截器扩展
 * 一个`@AcriAspect`注解搞定AOP切面
-* 支持自定义切面类、切面方法，自定义扩展简单易用
+* 支持自定义切面类、切面方法扩展
 * 支持单个方法单拦截
 * 支持单个方法多个拦截
 * 支持多方法多拦截
-* 不管是拦截还是切面，完全实现代码与业务分离
+* 支持类标注`@Acri` `@Acries`注解
+* `@Acri` `@Acries`注解支持拦截覆盖和拦截合并
+
+
 
 
 # 🫐🫐依赖
@@ -47,7 +50,7 @@ Acri（全称Annotation Custom Request Interception）
 <dependency>
     <groupId>cn.fntop</groupId>
     <artifactId>acri-spring-boot-starter</artifactId>
-    <version>1.3.0</version>
+    <version>1.4.0</version>
 </dependency>
 ```
 

@@ -9,7 +9,7 @@
 
     <name>Acri</name>
     <url>https://gitee.com/FnTop/acri</url>
-    <description>Acri注解式自定义请求/方法拦截</description>
+    <description>注解式自定义请求/方法拦截，一个注解搞定请求拦截与AOP增强，自定义扩展简单易用</description>
 
     <modules>
         <module>acri-core</module>
@@ -45,7 +45,7 @@
 
     <properties>
         <!-- 加了-SNAPSHOT后缀发布到 sonatype-snapshots（可发相同版本号） 对应的仓库 ，否则发布到sonatype-release（每次发布的版本号都要不一样）对应的仓库 -->
-        <revision>1.3.0</revision>
+        <revision>1.4.0</revision>
 
         <!-- 项目默认配置 -->
         <java.version>1.8</java.version>

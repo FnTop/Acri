@@ -16,6 +16,9 @@ import java.lang.reflect.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Acri切面
+ */
 @Aspect
 @Slf4j
 public class AcriesAspect {
@@ -37,8 +40,8 @@ public class AcriesAspect {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Object[] params = joinPoint.getArgs();
-        // 获取方法上的@Acri注解  
-        AcriAspect acri = method.getAnnotation(AcriAspect.class);
+        // 获取方法上的@Acri注解  getDeclaredAnnotation 与getDeclaredAnnotation 的区别 ：getDeclaredAnnotation允许获取继承类的注解
+        AcriAspect acri = method.getDeclaredAnnotation(AcriAspect.class);
         if (acri != null && acri.before()) {
             log.info("[AcriAspect:前置通知开启]");
             //处理调用
@@ -59,7 +62,7 @@ public class AcriesAspect {
         Method method = signature.getMethod();
         Object[] params = joinPoint.getArgs();
         // 获取方法上的@Acri注解
-        AcriAspect acri = method.getAnnotation(AcriAspect.class);
+        AcriAspect acri = method.getDeclaredAnnotation(AcriAspect.class);
         if (acri != null && acri.after()) {
             log.info("[AcriAspect:后置通知开启]");
             //处理调用
@@ -81,7 +84,7 @@ public class AcriesAspect {
         Method method = signature.getMethod();
         Object[] params = joinPoint.getArgs();
         // 获取方法上的@Acri注解
-        AcriAspect acri = method.getAnnotation(AcriAspect.class);
+        AcriAspect acri = method.getDeclaredAnnotation(AcriAspect.class);
         List<Object> paramList = CollUtil.newArrayList(params);
         if (acri != null) {
             //处理调用
@@ -112,7 +115,7 @@ public class AcriesAspect {
         Method method = signature.getMethod();
         Object[] params = joinPoint.getArgs();
         // 获取方法上的@Acri注解
-        AcriAspect acri = method.getAnnotation(AcriAspect.class);
+        AcriAspect acri = method.getDeclaredAnnotation(AcriAspect.class);
         if (acri != null && acri.throwing()) {
             log.info("[AcriAspect:异常通知开启]");
             //处理调用
