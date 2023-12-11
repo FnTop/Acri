@@ -21,10 +21,10 @@ import java.util.Set;
  * @description Acri拦截器
  * @date 2023/11/26 0:23
  */
-public class AcriIntercepter implements HandlerInterceptor {
+public class AcriInterceptor implements HandlerInterceptor {
     private ApplicationContext context;
 
-    public AcriIntercepter(ApplicationContext context) {
+    public AcriInterceptor(ApplicationContext context) {
         this.context = context;
     }
 

@@ -45,7 +45,7 @@
 
     <properties>
         <!-- 加了-SNAPSHOT后缀发布到 sonatype-snapshots（可发相同版本号） 对应的仓库 ，否则发布到sonatype-release（每次发布的版本号都要不一样）对应的仓库 -->
-        <revision>1.4.0</revision>
+        <revision>1.4.1</revision>
 
         <!-- 项目默认配置 -->
         <java.version>1.8</java.version>

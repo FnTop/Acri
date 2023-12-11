@@ -9,7 +9,7 @@
 <div style="display: flex; justify-content: center;">  
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/star.svg?theme=light" alt="Fn">
     <img style="margin: 5px 3px" src="https://gitee.com/FnTop/acri/badge/fork.svg?theme=dark" alt="Fn">
-    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.4.0-green" alt="Fn">
+    <img style="margin: 5px 3px" src="https://img.shields.io/badge/Version-1.4.1-green" alt="Fn">
     <img style="margin: 5px 3px" src="https://img.shields.io/badge/Apache-2.0-green" alt="Apache2.0">
 
 </div>
@@ -50,7 +50,7 @@ Acri（全称Annotation Custom Request Interception）
 <dependency>
     <groupId>cn.fntop</groupId>
     <artifactId>acri-spring-boot-starter</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
 </dependency>
 ```
 

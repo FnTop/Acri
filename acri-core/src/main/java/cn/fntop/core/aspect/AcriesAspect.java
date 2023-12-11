@@ -90,6 +90,7 @@ public class AcriesAspect {
             //处理调用
             if (acri.around()) {
                 log.info("[AcriAspect:环绕通知开启：前置环绕]");
+                process(acri, acri.fallback(), acri.beforeAroundMethod(), paramList, null, null);
             }
             Object returnVal = joinPoint.proceed();
             //处理调用
