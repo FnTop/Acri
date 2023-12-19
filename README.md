@@ -1,7 +1,7 @@
 <div align="center">
 <img style="margin: 5px 3px" src="static/img/logo.png" alt="Fn">
 
-<p>🍍🍍注解式自定义请求/方法拦截🍍🍍</p>
+<p>🍍🍍注解式自定义请求/AOP拦截🍍🍍</p>
 </div>
 
 <div align="center">
